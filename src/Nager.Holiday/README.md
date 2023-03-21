@@ -7,7 +7,7 @@ The list of supported countries can be found [here](https://date.nager.at/Countr
 
 ## Examples
 
-### Get all publicHolidays of a country and year
+### Get all holidays of a country and year
 ```cs
 using var holidayClient = new HolidayClient();
 var holidays = await holidayClient.GetHolidaysAsync(2022, "br");
