@@ -14,7 +14,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{13BD2E90-D967-45B3-8E0A-E96147D23C3C}"
 	ProjectSection(SolutionItems) = preProject
-		..\doc\README.md = ..\doc\README.md
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
