@@ -1,6 +1,6 @@
-# Nager.Date
+# Nager.Holiday
 
-Nager.Date is a popular project to query holidays. We currently support over 100 countries.
+Nager.Holiday is the client for [Nager.Date](https://date.nager.at), a popular project for querying holidays.
 
 ## Country Support
 The list of supported countries can be found [here](https://date.nager.at/Country/Coverage)
