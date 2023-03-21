@@ -7,6 +7,9 @@ The list of supported countries can be found [here](https://date.nager.at/Countr
 
 ## NuGet
 The NuGet package is available via [NuGet](https://www.nuget.org/packages/Nager.Holiday)
+```
+PM> install-package Nager.Holiday
+```
 
 ## Examples
 
