@@ -1,5 +1,11 @@
 # :calendar: Nager.Date - [Official Website](https://date.nager.at)
 
+## Country Support
+The list of supported countries can be found [here](https://date.nager.at/Country/Coverage)
+
+## NuGet
+The NuGet package is available via [NuGet](https://www.nuget.org/packages/Nager.Holiday)
+
 ## Examples
 
 ### Get all publicHolidays of a country and year
