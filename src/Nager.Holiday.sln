@@ -3,9 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nager.Holiday", "Nager.Holiday\Nager.Holiday.csproj", "{83358D3A-7EFA-4367-9330-2C77518DDFB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nager.Holiday", "Nager.Holiday\Nager.Holiday.csproj", "{83358D3A-7EFA-4367-9330-2C77518DDFB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nager.Holiday.UnitTest", "Nager.Holiday.UnitTest\Nager.Holiday.UnitTest.csproj", "{D8C059F8-EC69-4765-BF7B-F9C7898480C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nager.Holiday.UnitTest", "Nager.Holiday.UnitTest\Nager.Holiday.UnitTest.csproj", "{D8C059F8-EC69-4765-BF7B-F9C7898480C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{51E74705-980C-4634-92CA-9FC72562D06E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{13BD2E90-D967-45B3-8E0A-E96147D23C3C}"
+	ProjectSection(SolutionItems) = preProject
+		..\doc\README.md = ..\doc\README.md
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

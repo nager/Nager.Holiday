@@ -1,12 +1,41 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <Authors>Tino Hager</Authors>
+    <Company>nager.at</Company>
+    <Description>Public Holidays / Federal Holidays for a given year, translation native and english. Supports more than 100 countries</Description>
+
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <IncludeSymbols>true</IncludeSymbols>
+
+    <PackageIcon>calendar.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://date.nager.at</PackageProjectUrl>
+    <PackageTags>Holiday Public-Holiday PublicHoliday Bank-Holiday BankHoliday FederalHoliday NationalHoliday</PackageTags>
+
+    <RepositoryUrl>https://github.com/nager/Nager.Holiday</RepositoryUrl>
+
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+
+    <Version>1.0.0</Version>
+    
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="7.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md" Pack="true" PackagePath="LICENSE.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\doc\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\doc\logo.png" Pack="true" PackagePath="\" Visible="false" />
   </ItemGroup>
 
 </Project>

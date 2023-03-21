@@ -14,15 +14,15 @@ namespace Nager.Holiday
         /// <summary>
         /// Local name
         /// </summary>
-        public string LocalName { get; set; }
+        public string? LocalName { get; set; }
         /// <summary>
         /// English name
         /// </summary>
-        public string Name { get; set; }
+        public string? Name { get; set; }
         /// <summary>
         /// ISO 3166-1 alpha-2
         /// </summary>
-        public string CountryCode { get; set; }
+        public string? CountryCode { get; set; }
         /// <summary>
         /// Is this public holiday every year on the same date
         /// </summary>
@@ -34,11 +34,11 @@ namespace Nager.Holiday
         /// <summary>
         /// ISO-3166-2 - Federal states
         /// </summary>
-        public string[] Counties { get; set; }
+        public string[]? Counties { get; set; }
         /// <summary>
         /// A list of types the public holiday it is valid
         /// </summary>
-        public PublicHolidayType[] Types { get; set; }
+        public PublicHolidayType[]? Types { get; set; }
         /// <summary>
         /// The launch year of the public holiday
         /// </summary>
