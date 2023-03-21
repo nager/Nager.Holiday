@@ -10,7 +10,7 @@
 
     <IncludeSymbols>true</IncludeSymbols>
 
-    <PackageIcon>calendar.png</PackageIcon>
+    <PackageIcon>logo.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://date.nager.at</PackageProjectUrl>
