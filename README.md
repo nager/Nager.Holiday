@@ -1,3 +1,7 @@
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/nager?style=for-the-badge&color=000)](https://github.com/sponsors/nager)
+[![GitHub License](https://img.shields.io/github/license/nager/Nager.Holiday?style=for-the-badge&color=000)](https://github.com/nager/Nager.Holiday)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nager/Nager.Holiday/dotnet.yml?style=for-the-badge&color=000)](https://github.com/nager/Nager.Holiday)
+
 # Nager.Holiday
 
 Nager.Holiday is the client for [Nager.Date](https://date.nager.at), a popular project for querying holidays.
