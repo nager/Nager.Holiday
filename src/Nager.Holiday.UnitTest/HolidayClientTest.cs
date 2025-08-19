@@ -15,7 +15,7 @@ namespace Nager.Holiday.UnitTest
             using var holidayClient = new HolidayClient();
             var holidays = await holidayClient.GetHolidaysAsync(2022, "br");
             Assert.IsNotNull(holidays);
-            Assert.IsTrue(holidays.Length > 0);
+            Assert.IsGreaterThan(0, holidays.Length);
         }
 
         [TestMethod]
@@ -42,7 +42,7 @@ namespace Nager.Holiday.UnitTest
             using var holidayClient = new HolidayClient(httpClient: httpClient);
             var holidays = await holidayClient.GetHolidaysAsync(2022, "br");
             Assert.IsNotNull(holidays);
-            Assert.IsTrue(holidays.Length > 0);
+            Assert.IsGreaterThan(0, holidays.Length);
         }
     }
 }
