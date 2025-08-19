@@ -19,11 +19,10 @@ namespace Nager.Holiday.UnitTest
         }
 
         [TestMethod]
-        [ExpectedException(typeof(HolidayClientException))]
         public async Task GetHolidaysAsync_Brazil1500_ThrowException()
         {
             using var holidayClient = new HolidayClient();
-            var holidays = await holidayClient.GetHolidaysAsync(1500, "br");
+            await Assert.ThrowsExactlyAsync<HolidayClientException>(() => holidayClient.GetHolidaysAsync(1500, "br"));
         }
 
         [TestMethod]
