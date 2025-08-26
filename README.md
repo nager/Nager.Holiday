@@ -20,7 +20,7 @@ PM> install-package Nager.Holiday
 
 ## 💡 Usage Examples
 
-### Get all publicHolidays of a country and year
+### Retrieve All Public Holidays for a Specific Country and Year
 ```cs
 using var holidayClient = new HolidayClient();
 var holidays = await holidayClient.GetHolidaysAsync(2022, "br");
