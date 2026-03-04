@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Documentation/">
+    <File Path="../README.md" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="Nager.Holiday.UnitTest/Nager.Holiday.UnitTest.csproj" />
+  <Project Path="Nager.Holiday/Nager.Holiday.csproj" />
+</Solution>
