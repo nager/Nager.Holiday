@@ -8,43 +8,39 @@ namespace Nager.Holiday
     public class PublicHoliday
     {
         /// <summary>
-        /// The date
+        /// The date of the holiday
         /// </summary>
         public DateTime Date { get; set; }
 
         /// <summary>
-        /// Local name
-        /// </summary>
-        public string? LocalName { get; set; }
-
-        /// <summary>
-        /// English name
+        /// English name of the holiday
         /// </summary>
         public string? Name { get; set; }
 
         /// <summary>
-        /// ISO 3166-1 alpha-2
+        /// ISO 3166-1 alpha-2 country code
         /// </summary>
         public string? CountryCode { get; set; }
 
         /// <summary>
-        /// Is this public holiday in every county (federal state)
+        /// Indicates if this holiday applies to the entire country
         /// </summary>
-        public bool Global { get; set; }
+        public bool NationalHoliday { get; set; }
 
         /// <summary>
-        /// ISO-3166-2 - Federal states
+        /// ISO-3166-2 codes of the subdivisions where this holiday applies
         /// </summary>
-        public string[]? Counties { get; set; }
+        public string[]? SubdivisionCodes { get; set; }
 
         /// <summary>
         /// A list of types the public holiday it is valid
         /// </summary>
-        public PublicHolidayType[]? Types { get; set; }
+        public PublicHolidayType[]? HolidayTypes { get; set; }
 
-        /// <summary>
-        /// The launch year of the public holiday
-        /// </summary>
-        public int? LaunchYear { get; set; }
+        /// <inheritdoc/>
+        public override string ToString()
+        {
+            return $"{this.Date:yyyy-MM-dd} - {this.Name}";
+        }
     }
 }

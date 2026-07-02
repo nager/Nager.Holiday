@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Authors>Tino Hager</Authors>
     <Company>nager.at</Company>
-    <Description>Public Holidays / Federal Holidays for a given year, translation native and english. Supports more than 100 countries</Description>
+    <Description>Public Holidays / Federal Holidays for a given year. Supports more than 150 countries</Description>
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -20,13 +20,13 @@
 
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
 
-    <Version>1.0.1</Version>
+    <Version>2.0.0</Version>
     
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="10.0.3" />
+    <PackageReference Include="System.Text.Json" Version="10.0.9" />
   </ItemGroup>
 
   <ItemGroup>

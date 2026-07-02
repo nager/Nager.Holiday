@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Text.Json;
@@ -79,7 +79,7 @@ namespace Nager.Holiday
         {
             try
             {
-                using var httpResponse = await this._httpClient.GetAsync($"api/v3/publicholidays/{year}/{countryCode}", cancellationToken);
+                using var httpResponse = await this._httpClient.GetAsync($"api/v4/Holidays/{countryCode}/{year}", cancellationToken);
                 if (!httpResponse.IsSuccessStatusCode)
                 {
                     if (httpResponse.StatusCode == HttpStatusCode.BadRequest)

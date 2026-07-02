@@ -10,10 +10,10 @@ namespace Nager.Holiday.UnitTest
     public class HolidayClientTest
     {
         [TestMethod]
-        public async Task GetHolidaysAsync_Brazil2022_Successful()
+        public async Task GetHolidaysAsync_BrazilCurrentYear_Successful()
         {
             using var holidayClient = new HolidayClient();
-            var holidays = await holidayClient.GetHolidaysAsync(2022, "br");
+            var holidays = await holidayClient.GetHolidaysAsync(DateTime.Today.Year, "br");
             Assert.IsNotNull(holidays);
             Assert.IsGreaterThan(0, holidays.Length);
         }
@@ -31,7 +31,7 @@ namespace Nager.Holiday.UnitTest
             using var cancellationTokenSource = new CancellationTokenSource(TimeSpan.FromMilliseconds(1));
 
             using var holidayClient = new HolidayClient();
-            var holidays = await holidayClient.GetHolidaysAsync(2022, "br", cancellationTokenSource.Token);
+            var holidays = await holidayClient.GetHolidaysAsync(DateTime.Today.Year, "br", cancellationTokenSource.Token);
         }
 
         [TestMethod]
@@ -40,7 +40,7 @@ namespace Nager.Holiday.UnitTest
             using var httpClient = new HttpClient();
 
             using var holidayClient = new HolidayClient(httpClient: httpClient);
-            var holidays = await holidayClient.GetHolidaysAsync(2022, "br");
+            var holidays = await holidayClient.GetHolidaysAsync(DateTime.Today.Year, "br");
             Assert.IsNotNull(holidays);
             Assert.IsGreaterThan(0, holidays.Length);
         }

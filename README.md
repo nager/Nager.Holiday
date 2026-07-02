@@ -1,43 +1,67 @@
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/nager?style=for-the-badge&color=000)](https://github.com/sponsors/nager)
-[![GitHub License](https://img.shields.io/github/license/nager/Nager.Holiday?style=for-the-badge&color=000)](https://github.com/nager/Nager.Holiday)
-[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nager/Nager.Holiday/dotnet.yml?style=for-the-badge&color=000)](https://github.com/nager/Nager.Holiday)
-
 # Nager.Holiday
 
-**Nager.Holiday** is the official .NET client for [Nager.Date](https://date.nager.at), a popular project for querying public holidays worldwide. It allows you to easily retrieve holiday data for **100+ countries** via the API.
-> ⚠️ **Commercial use requires sponsorship.** Support the project [here](https://github.com/sponsors/nager).
+An official .NET client for [Nager.Date](https://date.nager.at), the popular public holiday API. Easily query worldwide public holidays, long weekends, and country info for **150+ countries**.
 
-## 🌍 Supported Countries
-The full list of supported countries can be found [here](https://date.nager.at/Country/Coverage).
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nager/Nager.Holiday/dotnet.yml?style=for-the-badge&color=24292e)](https://github.com/nager/Nager.Holiday)
+[![GitHub License](https://img.shields.io/github/license/nager/Nager.Holiday?style=for-the-badge&color=24292e)](https://github.com/nager/Nager.Holiday)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/nager?style=for-the-badge&color=db61a2)](https://github.com/sponsors/nager)
+
+---
+
+> [!IMPORTANT]
+> **Commercial use requires sponsorship.** > If you use this library in a commercial product, please support the ongoing maintenance and data updates by [becoming a GitHub Sponsor](https://github.com/sponsors/nager).
+
+---
+
+## ✨ Key Features
+
+- **Global Coverage:** Retrieve public holidays for over 150+ countries.
+- **Regional Support:** Supports subdivisions (states, regions, counties via ISO-3166-2) where available.
+- **Modern .NET client:** Fully async, lightweight, and easy to integrate.
+- **Detailed Holiday Types:** Differentiates between Public, Bank, School, Authorities, Optional, and Observance.
 
 ## 📦 Installation
 
-The NuGet package is available via [NuGet](https://www.nuget.org/packages/Nager.Holiday)
+Install the package via the [NuGet Package Manager Console](https://www.nuget.org/packages/Nager.Holiday):
 
 ```powershell
-PM> install-package Nager.Holiday
+Install-Package Nager.Holiday
+
 ```
 
-## 💡 Usage Examples
+Or via the .NET CLI:
 
-### Retrieve All Public Holidays for a Specific Country and Year
-```cs
+```bash
+dotnet add package Nager.Holiday
+
+```
+
+---
+
+## 💡 Usage Example
+
+### Retrieve Public Holidays for a Country
+
+```csharp
+using Nager.Holiday;
+
 using var holidayClient = new HolidayClient();
-var holidays = await holidayClient.GetHolidaysAsync(2022, "br");
+// Fetch holidays for Brazil (BR) in 2026
+var holidays = await holidayClient.GetHolidaysAsync(2026, "br");
 
 foreach (var holiday in holidays)
 {
-    //holiday...
-    //holiday.Date -> The date
-    //holiday.LocalName -> The local name
-    //holiday.Name -> The english name
-    //holiday.Global -> Is this public holiday in every county (federal state)
-    //holiday.Counties -> Is the public holiday only valid for a special county ISO-3166-2 - Federal states
-    //holiday.Type -> Public, Bank, School, Authorities, Optional, Observance
+    Console.WriteLine($"{holiday.Date:yyyy-MM-dd}: {holiday.Name}");
+    // Available properties:
+    // holiday.NationalHoliday       -> bool (Indicates if this holiday applies to the entire country)
+    // holiday.SubdivisionCodes      -> string[] (ISO-3166-2 codes of the subdivisions where this holiday applies)
+    // holiday.holidayTypes          -> List of holiday types this holiday is classified under (Public, Bank, School, Authorities, Optional, Observance)
 }
+
 ```
-## ✅ Key Features
-- Retrieve holidays for 100+ countries
-- Supports subdivisions (states or regions) where available
-- Easy-to-use .NET API client
-- Commercial usage requires sponsorship
+
+---
+
+## 🌍 Supported Countries
+
+The complete and up-to-date list of all supported countries and their current API coverage can be found on the [Nager.Date Coverage Page](https://date.nager.at/country/coverage).
