@@ -53,9 +53,9 @@ foreach (var holiday in holidays)
 {
     Console.WriteLine($"{holiday.Date:yyyy-MM-dd}: {holiday.Name}");
     // Available properties:
-    // holiday.NationalHoliday       -> bool (Indicates if this holiday applies to the entire country)
-    // holiday.SubdivisionCodes      -> string[] (ISO-3166-2 codes of the subdivisions where this holiday applies)
-    // holiday.holidayTypes          -> List of holiday types this holiday is classified under (Public, Bank, School, Authorities, Optional, Observance)
+    // holiday.NationalHoliday    ->    bool (Indicates if this holiday applies to the entire country)
+    // holiday.SubdivisionCodes   ->    string[] (ISO-3166-2 codes of the subdivisions where this holiday applies)
+    // holiday.HolidayTypes       ->    List of holiday types this holiday is classified under (Public, Bank, School, Authorities, Optional, Observance)
 }
 
 ```
